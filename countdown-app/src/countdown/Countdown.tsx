@@ -12,7 +12,7 @@ function getNextSaturday(now = new Date()): Date {
 }
 
 function getRemaining(ms: number) {
-  const totalSeconds = Math.floor(ms / 1000);
+  const totalSeconds = Math.floor(ms / 1000)
   const seconds = totalSeconds % 60;
   const totalMinutes = Math.floor(totalSeconds / 60);
   const minutes = totalMinutes % 60;
@@ -36,7 +36,7 @@ export default function Countdown(): JSX.Element {
   const remaining = getRemaining(Math.max(0, diff));
 
   if (ended) {
-    return <div className="lead">It's today — enjoy your Saturday!</div>;
+    return <div className="lead">It&apos;s today — enjoy your Saturday!</div>;
   }
 
   return (
