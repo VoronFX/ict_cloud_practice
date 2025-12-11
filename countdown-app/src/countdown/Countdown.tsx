@@ -12,7 +12,7 @@ function getNextSaturday(now = new Date()): Date {
 }
 
 function getRemaining(ms: number) {
-  const totalSeconds = Math.floor(ms / 1000)
+  const totalSeconds = Math.floor(ms / 1000);
   const seconds = totalSeconds % 60;
   const totalMinutes = Math.floor(totalSeconds / 60);
   const minutes = totalMinutes % 60;
