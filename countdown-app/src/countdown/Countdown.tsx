@@ -23,8 +23,12 @@ function getRemaining(ms: number) {
 }
 
 export default function Countdown(): JSX.Element {
-  const [target] = useState(() => getNextSaturday());
-  const [now, setNow] = useState<Date>(new Date());
+
+  const [target] = useState(() =>
+    getNextSaturday());
+
+  const [now, setNow] = useState<Date>(
+    new Date());
 
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 1000);
@@ -44,7 +48,7 @@ export default function Countdown(): JSX.Element {
       <div className="d-flex justify-content-center gap-3 mb-3">
         <div className="text-center">
           <div className="h2 mb-0">{remaining.days}</div>
-          <div className="text-muted small">Days</div>
+          <div className="text-muted small">HOURS</div>
         </div>
         <div className="text-center">
           <div className="h2 mb-0">{String(remaining.hours).padStart(2, '0')}</div>
